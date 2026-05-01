@@ -1,0 +1,62 @@
+# Build directories
+build/
+[Bb]uild/
+[Bb]uilds/
+out/
+[Oo]ut/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+
+# Compiled output
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+third_party/whisper.cpp/
+jarvis_py/
+
+# Debug
+*.pdb
+*.ilk
+*.idb
+
+# IDE / Editor
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Dependencies
+vcpkg_installed/
+conanbuild/
+_deps/
+
+# Misc build artifacts
+Makefile
+*.cmake
+!CMakeLists.txt
+*.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+
+# Package managers
+vcpkg/
+conan/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

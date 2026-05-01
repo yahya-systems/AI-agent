@@ -1,0 +1,10 @@
+Search the web for real-time information. Args: query (string), max_results (int, optional, default 5).
+
+web_search queries the Tavily search API and returns an AI-generated answer plus top search results with titles, URLs, and content snippets.
+
+Use this tool whenever the user asks about current events, recent news, live data, or anything that requires up-to-date information beyond training data.
+
+Examples:
+{"tool": "web_search", "query": "current Bitcoin price"}
+{"tool": "web_search", "query": "latest news in Morocco today"}
+{"tool": "web_search", "query": "weather in Marrakesh tomorrow", "max_results": 3}

@@ -1,0 +1,12 @@
+Executes a shell command from a specified directory (defaults to home). Args: command (string) The command itself, working_directory (string) the working directory. 
+
+Arguments:
+{
+  "command": "string - The shell command to execute",
+  "working_directory": "string - The directory to run the command from. Defaults to the user's home directory if not provided."
+}
+Notes: 
+- Commands are executed starting in the `working_directory`. 
+- Both stdout and stderr are captured.
+- If the command exits with a non-zero status, the output is prefixed with "Error (exit X):".
+- If the command produces no output, it returns "No output".

@@ -1,0 +1,15 @@
+Executes an AppleScript on macOS and returns the output. Args: script (string) The script to run
+
+Arguments:
+<tool_call>
+  <name>run_applescript</name>
+  <args>
+    <script>tell application "System Events" to display dialog "Hello"</script>
+  </args>
+</tool_call>
+Notes: 
+- Both stdout and stderr are captured.
+- If the script exits with a non-zero status, the output is prefixed with "Error (exit X):".
+- If the script executes successfully but produces no output, it returns "Done".
+- Use this for macOS UI automation, application control, and system preferences manipulation.
+- You may need to grant Accessibility/Automation permissions to the terminal/agent running the script.

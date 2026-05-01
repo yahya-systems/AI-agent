@@ -1,0 +1,38 @@
+Execute Python code in an isolated venv. Args: code (string), packages (array), it's format in XML should be like this <packages><package>PACKAGE_NAME</package>...</packages>, variant (code/file/repl). Code arguments must always be wrapped in CDATA sections to prevent XML parsing errors: <code><![CDATA[your code here]]></code>
+
+run_python executes Python code in an isolated virtual environment at jarvis_py/venv using python3.12.
+
+Variants:
+- code (default): write and execute inline code. Args: code (string), packages (array of strings, optional)
+- file: execute an existing script at a given path. Args: path (string)
+- repl: evaluate a single expression and return its result. Args: expression (string)
+
+Packages are installed automatically via pip before execution.
+
+Examples:
+<tool_call>
+  <name>run_python</name>
+  <variant>code</variant>
+  <code>print('hello')</code>
+</tool_call>
+
+<tool_call>
+  <name>run_python</name>
+  <variant>code</variant>
+  <code>import requests\nprint(requests.get('https://api.coinbase.com/v2/prices/BTC-USD/spot').json())</code>
+  <packages>
+    <package>requests</package>
+  </packages>
+</tool_call>
+
+<tool_call>
+  <name>run_python</name>
+  <variant>file</variant>
+  <path>/Users/architect/Documents/Projects/Prometheus/script.py</path>
+</tool_call>
+
+<tool_call>
+  <name>run_python</name>
+  <variant>repl</variant>
+  <expression>2 ** 32</expression>
+</tool_call>

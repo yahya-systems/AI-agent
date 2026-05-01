@@ -1,0 +1,6 @@
+get_time
+Returns the current time and date. No arguments.
+
+get_time returns the system clock formatted as YYYY-MM-DD HH:MM:SS.
+No arguments required. Use when the user asks about the current time or date.
+Example: <tool><name>get_time</name></tool>
