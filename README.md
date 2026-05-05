@@ -10,7 +10,7 @@ You speak. Jarvis thinks. Tasks get done.
 
 Jarvis listens for voice commands, reasons about what needs to happen, and executes tools until the job is complete — without you touching the keyboard.
 
-**Example:** *"Open WhatsApp in Chrome, find a contact named Makoudi, and send him a message."*
+**Example:** *"Open WhatsApp in Chrome, find a contact named X, and send him a message."*
 Jarvis handles the browser interaction autonomously via Chrome remote debugging, navigates to the contact, and sends the message.
 
 ---
